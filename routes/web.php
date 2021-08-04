@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\IngredientController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/login',[LoginController::class,'index'])->name('login');
+
+Route::resource('ingredients',IngredientController::class)->middleware('auth');
