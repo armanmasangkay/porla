@@ -1,0 +1,42 @@
+@font-face {
+    font-family: Scriptina;
+    src: url('font/SCRIPTIN.ttf');
+}
+
+.table tr td, label, input, select, 
+textarea, button, a, h4{
+    letter-spacing: 0.05rem;
+}
+
+.navbar-brand{
+    font-weight: 300;
+    font-family: Scriptina;
+    font-size: 3.5em;
+    margin-top: -0.4rem;
+    margin-left: -0.5rem;
+    color: #000 !important;
+    letter-spacing: 0.07rem !important;
+    outline: none !important;
+}
+
+img.navbar-logo{
+    /* position: absolute; */
+    height: 5rem !important;
+}
+
+.table-title{
+    font-weight: 400;
+}
+
+li.active{
+    border-bottom: 3px solid #4242fd;
+}
+
+.bottom-title{
+    font-family: Scriptina;
+}
+
+button.navbar-toggler:active{
+    border: 1px solid #292929 !important;
+    outline: none !important;
+}
