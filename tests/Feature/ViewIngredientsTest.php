@@ -26,7 +26,7 @@ class ViewIngredientsTest extends TestCase
    {
         $response=$this->actingAs($this->getUser())->get(route('ingredients.index'));
         $response->assertOk();
-        $response->assertViewIs('ingredients.index');
+        $response->assertViewIs('web.pages.ingredients');
         $response->assertViewHas('ingredients');
    }
 
@@ -35,6 +35,12 @@ class ViewIngredientsTest extends TestCase
    {
         $response=$this->get(route('ingredients.index'));
         $response->assertRedirect(route('login'));
+   }
+
+   public function test_mobile_ingredients_view_route()
+   {
+        $response=$this->get(route('ingredients.index.mobile'));
+        $response->assertViewis('mobile.pages.ingredients');
    }
 
 

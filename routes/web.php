@@ -20,8 +20,8 @@ Route::get('/', function(){
 
 Route::get('/login',[LoginController::class,'index'])->name('login');
 
-Route::resource('ingredients',IngredientController::class);//->middleware('auth');
+Route::resource('ingredients',IngredientController::class)->middleware('auth');
 
-Route::get('mobile/stocks/view', function(){
+Route::get('mobile/ingredients', function(){
     return view('mobile.pages.ingredients');
-});
+})->name('ingredients.index.mobile');
